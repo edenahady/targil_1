@@ -39,7 +39,7 @@ void euclidean(dif_arr)
 {
 	
 
-	double dist = pow(dif_arr[0], 2) + pow(dif_arr[1], 2) + pow(dif_arr[2], 2);       //calculating Euclidean distance
+	double dist = pow(dif_arr[0], 2) + pow(dif_arr[1], 2) + pow(dif_arr[2], 2);       
 	dist = sqrt(dist);
 
 	cout << dist;
@@ -72,19 +72,25 @@ void minkowski(diff_arr)
 	cout<< Math.Sqrt(sum);
 }
 
-//int main()
-//{
-//	double x1, y1, x2, y2;
-//	double dist;
-//	cout << "Enter x1:" << endl;    //user inputs the points
-//	cin >> x1;
-//	cout << "Enter y1:" << endl;
-//	cin >> y1;
-//	cout << "Enter x2:" << endl;
-//	cin >> x2;
-//	cout << "Enter y2:" << endl;
-//	cin >> y2;
-//
-//	dist = distanceCalculate(x1, y1, x2, y2);    //initiate equation
-//	cout << "Distance Between (" << x1 << " , " << y1 << ") and (" << x2 << " , " << y2 << ") = " << dist;
-//}
+int main()
+{
+	
+	double arry1[3];
+	for (int i = 0; i < 3 i++)
+	{
+		cin >> arry1[i];
+	}
+	cout<< << endl;
+	double arry2[3];
+
+	for (int i = 0; i < 3 i++)
+	{
+		cin >> arry2[i];
+	}
+	cout<< << endl;
+
+	euclidean(difference_calculator(arry1, arry2));
+	manhattan_distance(difference_calculator(arry1, arry2));
+	chebyshev(difference_calculator(arry1, arry2));
+	canberra(difference_calculator(arry1, arry2), arry1, arry2);
+}
