@@ -49,7 +49,9 @@ void euclidean(dif_arr)
 
 void chebyshev(dif_arr)
 {
-	cout << max(diff_arr);
+	double max_temp = max(dif_arr[0], diff_arr[1]);
+	max_temp = max(max_temp, diff_arr[2]);
+	cout << max_temp;
 }
 
 //int main()
