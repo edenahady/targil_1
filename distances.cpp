@@ -62,6 +62,16 @@ void canberra(dif_arr, arr1, arr2)
 	dist = sol1 + sol2 + sol3;
 }
 
+void minkowski(diff_arr)
+{
+	int sum = 0;
+	for (int i = 0; i < 3; i++)
+	{
+		sum = sum + Math.Pow(diff_arr[i], 2);
+	}
+	return sqrt(sum);
+}
+
 //int main()
 //{
 //	double x1, y1, x2, y2;
