@@ -28,7 +28,7 @@ void manhattan_distance(double x1, double x2, double y1, double y2, double z1, d
 	cout << "\n\nManhattan Distance between P1(" << x1 << "," << y1 << ") and P2(" << x2 << "," << y2 << ") : " << distance;
 }
 
-double distanceCalculate(double x1, double y1, double z1, double x2, double y2, double z2)
+double euclidean(double x1, double y1, double z1, double x2, double y2, double z2)
 {
 	double x = x1 - x2; //calculating number to square in next step
 	double y = y1 - y2;
