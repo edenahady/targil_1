@@ -30,29 +30,20 @@ array difference_calculator(arr1, arr2)
 
 using namespace std;
 >>>>>>> 5f32e8814c42ffe37ad185c6ce17885be41eb04e
-void manhattan_distance(double x1, double x2, double y1, double y2, double z1, double z2)
+void manhattan_distance(dif_arr)
 {
-	double distance;
-	double x_dif, y_dif, z_dif;
-
-	x_dif = abs(x2 - x1);
-	y_dif = abs(y2 - y1);
-	z_dif = abs(z2 - z1);
-	distance = x_dif + y_dif + z_dif;
-	cout << "\n\nManhattan Distance between P1(" << x1 << "," << y1 << ") and P2(" << x2 << "," << y2 << ") : " << distance;
+	double distance = dif_arr[0] + dif_arr[1] + dif_arr[2];
+	cout << distance;
 }
 
-double euclidean(double x1, double y1, double z1, double x2, double y2, double z2)
+void euclidean(dif_arr)
 {
-	double x = x1 - x2; //calculating number to square in next step
-	double y = y1 - y2;
-	double z = z1 - z2;
-	double dist;
+	
 
-	dist = pow(x, 2) + pow(y, 2) + pow(z, 2);       //calculating Euclidean distance
+	double dist = pow(dif_arr[0], 2) + pow(dif_arr[1], 2) + pow(dif_arr[2], 2);       //calculating Euclidean distance
 	dist = sqrt(dist);
 
-	return dist;
+	cout << dist;
 }
 
 //int main()
