@@ -2,7 +2,7 @@
 #include<math.h>
 <<<<<<<< HEAD:distances.cpp
 #include<vector>
-
+#include <iomanip>
 ========
 #include<cmath.h>
 >>>>>>>> 86cf2238d01223285eadfdfea8570dc980fe6cb5:euclidean .cpp
@@ -32,7 +32,7 @@ using namespace std;
 void manhattan_distance(dif_arr)
 {
 	double distance = dif_arr[0] + dif_arr[1] + dif_arr[2];
-	cout << distance;
+	cout << setprecision(10) << distance;
 }
 
 void euclidean(dif_arr)
@@ -42,7 +42,7 @@ void euclidean(dif_arr)
 	double dist = pow(dif_arr[0], 2) + pow(dif_arr[1], 2) + pow(dif_arr[2], 2);       
 	dist = sqrt(dist);
 
-	cout << dist;
+	cout << setprecision(10) << dist;
 }
 
 
@@ -50,7 +50,7 @@ void chebyshev(dif_arr)
 {
 	double max_temp = max(dif_arr[0], diff_arr[1]);
 	max_temp = max(max_temp, diff_arr[2]);
-	cout << max_temp;
+	cout << setprecision(10) << max_temp;
 }
 
 void canberra(dif_arr, arr1, arr2)
@@ -59,7 +59,7 @@ void canberra(dif_arr, arr1, arr2)
 	sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
 	sol3 = dif_arr[2] / (arr1[2] + arr2[2]);
 	dist = sol1 + sol2 + sol3;
-	cout << dist;
+	cout << setprecision(10) << dist;
 }
 
 void minkowski(diff_arr)
@@ -69,7 +69,7 @@ void minkowski(diff_arr)
 	{
 		sum = sum + Math.Pow(diff_arr[i], 2);
 	}
-	cout<< Math.Sqrt(sum);
+	cout<< setprecision(10) << Math.Sqrt(sum);
 }
 
 int main()
