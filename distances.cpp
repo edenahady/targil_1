@@ -93,4 +93,5 @@ int main()
 	manhattan_distance(difference_calculator(arry1, arry2));
 	chebyshev(difference_calculator(arry1, arry2));
 	canberra(difference_calculator(arry1, arry2), arry1, arry2);
+	minkowski(difference_calculator(arry1, arry2));
 }
