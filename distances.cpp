@@ -1,8 +1,21 @@
 #include<iostream>
 #include<math.h>
 #include<cmath>
+#include<vector>
 
 using namespace std;
+
+array difference_calculator(arr1, arr2)
+{
+	double x_dif, y_dif, z_dif;
+	double dif_arr[];
+
+	dif_arr[0] = abs(arr1[0] - arr2[0]);
+	dif_arr[1] = abs(arr1[1] - arr2[1]);
+	dif_arr[2] = abs(arr1[2] - arr2[2]);
+	return dif_arr
+}
+
 void manhattan_distance(double x1, double x2, double y1, double y2, double z1, double z2)
 {
 	double distance;
