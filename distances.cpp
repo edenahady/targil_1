@@ -1,7 +1,8 @@
 #include<iostream>
 #include<math.h>
-<<<<<<< HEAD:euclidean .cpp
-#include<cmath.h>
+<<<<<<< HEAD
+
+
 =======
 #include<cmath>
 
@@ -18,6 +19,15 @@ double diffrence_calculater(double x1, double x2, double y1, double y2, double z
 }
 
 
+=======
+<<<<<<<< HEAD:distances.cpp
+#include<cmath>
+
+========
+#include<cmath.h>
+
+using namespace std;
+>>>>>>> 5f32e8814c42ffe37ad185c6ce17885be41eb04e
 void manhattan_distance(double x1, double x2, double y1, double y2, double z1, double z2)
 {
 	double distance;
