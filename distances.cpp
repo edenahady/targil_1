@@ -46,6 +46,12 @@ void euclidean(dif_arr)
 	cout << dist;
 }
 
+
+void chebyshev(dif_arr)
+{
+	cout << max(diff_arr);
+}
+
 //int main()
 //{
 //	double x1, y1, x2, y2;
