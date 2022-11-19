@@ -54,6 +54,14 @@ void chebyshev(dif_arr)
 	cout << max_temp;
 }
 
+void canberra(dif_arr, arr1, arr2)
+{
+	sol1 = dif_arr[0] / (arr1[0] + arr2[0]);
+	sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
+	sol3 = dif_arr[2] / (arr1[2] + arr2[2]);
+	dist = sol1 + sol2 + sol3;
+}
+
 //int main()
 //{
 //	double x1, y1, x2, y2;
