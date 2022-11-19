@@ -1,7 +1,6 @@
 #include<iostream>
 #include<math.h>
 <<<<<<<< HEAD:distances.cpp
-#include<cmath>
 #include<vector>
 
 ========
@@ -14,9 +13,9 @@ array difference_calculator(arr1, arr2)
 	double x_dif, y_dif, z_dif;
 	double dif_arr[];
 
-	dif_arr[0] = abs(arr1[0] - arr2[0]);
-	dif_arr[1] = abs(arr1[1] - arr2[1]);
-	dif_arr[2] = abs(arr1[2] - arr2[2]);
+	dif_arr[0] = Math.Abs(arr1[0] - arr2[0]);
+	dif_arr[1] = Math.Abs(arr1[1] - arr2[1]);
+	dif_arr[2] = Math.Abs(arr1[2] - arr2[2]);
 	return dif_arr
 }
 
@@ -60,6 +59,7 @@ void canberra(dif_arr, arr1, arr2)
 	sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
 	sol3 = dif_arr[2] / (arr1[2] + arr2[2]);
 	dist = sol1 + sol2 + sol3;
+	cout << dist;
 }
 
 void minkowski(diff_arr)
@@ -69,7 +69,7 @@ void minkowski(diff_arr)
 	{
 		sum = sum + Math.Pow(diff_arr[i], 2);
 	}
-	return sqrt(sum);
+	cout<< Math.Sqrt(sum);
 }
 
 //int main()
