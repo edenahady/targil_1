@@ -15,40 +15,40 @@ using namespace std;
 Distances::Distances(vector<double> v1, vector<double> v2) {}
 Distances::Distances(){};
 
-vector<double> Distances:: Difference_Calculator(vector<double> v1, vector<double> v2)
-//calculates the difference between 2 vectors
-{
-	vector<double> Dif_V;
-	for (int i=0; i<v1.size(); i++)
-	{
-		Dif_V[i] = abs(v1[i] - v2[i]);
-	}
-	return Dif_V;
-	// dif_arr[0] = abs(v1[0] - v2[0]);
-	// dif_arr[1] = abs(v1[1] - v2[1]);
-	// dif_arr[2] = abs(v1[2] - v2[2]);
-	// return dif_arr;
-}
+// vector<double> Distances:: Difference_Calculator(vector<double> v1, vector<double> v2)
+// //calculates the difference between 2 vectors
+// {
+// 	vector<double> Dif_V;
+// 	for (int i=0; i<v1.size(); i++)
+// 	{
+// 		Dif_V[i] = abs(v1[i] - v2[i]);
+// 	}
+// 	return Dif_V;
+// 	// dif_arr[0] = abs(v1[0] - v2[0]);
+// 	// dif_arr[1] = abs(v1[1] - v2[1]);
+// 	// dif_arr[2] = abs(v1[2] - v2[2]);
+// 	// return dif_arr;
+// }
 
-double Distances:: Manhattan_Distance(vector<double> Dif_V)
+double Distances:: Manhattan_Distance(vector<double> v1, vector<double> v2)
 //uses the difference and sums them
 {
 	double sum = 0;
-	for (int i=0; i<Dif_V.size(); i++)
+	for (int i=0; i<v1.size(); i++)
 	{
-		sum += Dif_V[i];
+		sum += (v1[i]-v2[i]);
 	}
 	// double distance = dif_v[0] + dif_v[1] + dif_v[2];
 	return sum;
 }
 
-double Distances::euclidean(vector<double>& Dif_V)
+double Distances::euclidean(vector<double> v1, vector<double> v2)
 //returns the square root of sum of the squares of the difference
 {
 	double dist = 0;
-	for (int i=0; i<Dif_V.size(); i++)
+	for (int i=0; i<v1.size(); i++)
 	{
-		dist += pow(Dif_V[i],2);
+		dist += pow((v1[i]-v2[i]),2);
 	}
 	// double dist = pow(dif_v[0], 2) + pow(dif_v[1], 2) + pow(dif_v[2], 2);       
 	dist = sqrt(dist);
@@ -57,14 +57,14 @@ double Distances::euclidean(vector<double>& Dif_V)
 }
 
 
-double Distances::chebyshev(vector<double> Dif_V)
+double Distances::chebyshev(vector<double> v1, vector<double> v2)
 {
 //returns the max of the differences of the 2 vectors
 	double max = 0;
-	for (int i=0; i<Dif_V.size(); i++){
-		if (max<Dif_V[i])
+	for (int i=0; i<v1.size(); i++){
+		if (max< (v1[i]-v2[i]))
 		{
-			max = Dif_V[i];
+			max = v1[i]-v2[i];
 		}
 	}
 	// double max_temp = max(dif_arr[0], dif_arr[1]);
@@ -72,13 +72,13 @@ double Distances::chebyshev(vector<double> Dif_V)
 	return max;
 }
 
-double Distances:: canberra(vector<double> Dif_V, vector<double> v1, vector<double> v2)
+double Distances:: canberra(vector<double> v1, vector<double> v2)
 //returns the difference between the 2 vector devided by the sum of them
 {
 	double sum = 0;
-	for (int i=0; i< Dif_V.size(); i++)
+	for (int i=0; i< v1.size(); i++)
 	{
-		sum += Dif_V[i]/(v1[i]+v2[i]);
+		sum += (v1[i]-v2[i])/(v1[i]+v2[i]);
 	}
 	// double sol1 = dif_arr[0] / (arr1[0] + arr2[0]);
 	// double sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
@@ -87,13 +87,13 @@ double Distances:: canberra(vector<double> Dif_V, vector<double> v1, vector<doub
 	return sum;
 }
 
-double Distances::minkowski(vector<double>& Dif_V)
+double Distances::minkowski(vector<double> v1, vector<double> v2)
 //returns the square root of sum of the squares of the difference
 {
 	int sum = 0;
-	for (int i = 0; i < Dif_V.size(); i++)
+	for (int i = 0; i < v1.size(); i++)
 	{
-		sum += pow(Dif_V[i], 2);
+		sum += pow((v1[i]-v2[i]), 2);
 	}
 	return sqrt(sum);
 }
@@ -118,12 +118,16 @@ int main()
 	// cout<< endl;
 
 	Distances dis(v1, v2);
-	vector<double> difference = dis.Distances::Difference_Calculator(v1,v2);
-	double euc =  dis.Distances::euclidean(difference);
-	double manh = dis.Distances::Manhattan_Distance(difference);
-	double cheb = dis.Distances::chebyshev(difference);
-	double canb = dis.Distances::canberra(difference, v1, v2);
-	double mink = dis.Distances::minkowski(difference);
-	}
-
+	//vector<double> difference = dis.Distances::Difference_Calculator(v1,v2);
+	double euc =  dis.Distances::euclidean(v1, v2);
+	double ManH = dis.Distances::Manhattan_Distance(v1, v2);
+	double cheb = dis.Distances::chebyshev(v1, v2);
+	double canb = dis.Distances::canberra(v1, v2);
+	double mink = dis.Distances::minkowski(v1, v2);
+	cout<<setprecision(10)<<euc<<endl;
+	cout<<setprecision(10)<<ManH;
+	cout<<setprecision(10)<<cheb;
+	cout<<setprecision(10)<<canb;
+	cout<<setprecision(10)<<mink;
+}
 	//setprecision(10) לזכור לשים
