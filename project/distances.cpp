@@ -36,7 +36,7 @@ double Distances:: Manhattan_Distance(vector<double> v1, vector<double> v2)
 	double sum = 0;
 	for (int i=0; i<v1.size(); i++)
 	{
-		sum += (v1[i]-v2[i]);
+		sum += abs(v1[i]-v2[i]);
 	}
 	// double distance = dif_v[0] + dif_v[1] + dif_v[2];
 	return sum;
@@ -48,7 +48,7 @@ double Distances::euclidean(vector<double> v1, vector<double> v2)
 	double dist = 0;
 	for (int i=0; i<v1.size(); i++)
 	{
-		dist += pow((v1[i]-v2[i]),2);
+		dist += pow(abs(v1[i]-v2[i]),2);
 	}
 	// double dist = pow(dif_v[0], 2) + pow(dif_v[1], 2) + pow(dif_v[2], 2);       
 	dist = sqrt(dist);
@@ -62,9 +62,9 @@ double Distances::chebyshev(vector<double> v1, vector<double> v2)
 //returns the max of the differences of the 2 vectors
 	double max = 0;
 	for (int i=0; i<v1.size(); i++){
-		if (max< (v1[i]-v2[i]))
+		if (max< abs(v1[i]-v2[i]))
 		{
-			max = v1[i]-v2[i];
+			max = abs(v1[i]-v2[i]);
 		}
 	}
 	// double max_temp = max(dif_arr[0], dif_arr[1]);
@@ -78,7 +78,7 @@ double Distances:: canberra(vector<double> v1, vector<double> v2)
 	double sum = 0;
 	for (int i=0; i< v1.size(); i++)
 	{
-		sum += (v1[i]-v2[i])/(v1[i]+v2[i]);
+		sum += abs(v1[i]-v2[i])/(v1[i]+v2[i]);
 	}
 	// double sol1 = dif_arr[0] / (arr1[0] + arr2[0]);
 	// double sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
@@ -93,7 +93,7 @@ double Distances::minkowski(vector<double> v1, vector<double> v2)
 	int sum = 0;
 	for (int i = 0; i < v1.size(); i++)
 	{
-		sum += pow((v1[i]-v2[i]), 2);
+		sum += pow(abs(v1[i]-v2[i]), 2);
 	}
 	return sqrt(sum);
 }
@@ -125,9 +125,9 @@ int main()
 	double canb = dis.Distances::canberra(v1, v2);
 	double mink = dis.Distances::minkowski(v1, v2);
 	cout<<setprecision(10)<<euc<<endl;
-	cout<<setprecision(10)<<ManH;
-	cout<<setprecision(10)<<cheb;
-	cout<<setprecision(10)<<canb;
-	cout<<setprecision(10)<<mink;
+	cout<<setprecision(10)<<ManH<<endl;
+	cout<<setprecision(10)<<cheb<<endl;
+	cout<<setprecision(10)<<canb<<endl;
+	cout<<setprecision(10)<<mink<<endl;
 }
 	//setprecision(10) לזכור לשים
