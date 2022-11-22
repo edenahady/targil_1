@@ -15,9 +15,8 @@ using namespace std;
 Distances::Distances(vector<double> v1, vector<double> v2) {}
 Distances::Distances(){};
 
-vector<double> Distances:: Difference_Calculator(vector<double>& v1, vector<double>& v2)
+vector<double> Distances:: Difference_Calculator(vector<double> v1, vector<double> v2)
 {
-	double X_Dif, Y_Dif, Z_Dif;
 	vector<double> Dif_V;
 	for (int i=0; i<v1.size(); i++)
 	{
