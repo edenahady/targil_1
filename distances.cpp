@@ -1,14 +1,20 @@
 #include<iostream>
 #include<math.h>
-<<<<<<<< HEAD:distances.cpp
+
 #include<vector>
 #include <iomanip>
-========
-#include<cmath.h>
->>>>>>>> 86cf2238d01223285eadfdfea8570dc980fe6cb5:euclidean .cpp
-using namespace std;
+#include<cmath>
+#include<distances.h>
 
-array difference_calculator(arr1, arr2)
+using namespace std;
+>>>>>>> 5f32e8814c42ffe37ad185c6ce17885be41eb04e
+
+void manhattan_distance(dif_arr)
+{
+	double distance = dif_arr[0] + dif_arr[1] + dif_arr[2];
+	cout << setprecision(10) << distance;
+}
+int * difference_calculator(arr1, arr2)
 {
 	double x_dif, y_dif, z_dif;
 	double dif_arr[];
@@ -19,21 +25,6 @@ array difference_calculator(arr1, arr2)
 	return dif_arr
 }
 
-
-=======
-<<<<<<<< HEAD:distances.cpp
-#include<cmath>
-
-========
-#include<cmath.h>
-
-using namespace std;
->>>>>>> 5f32e8814c42ffe37ad185c6ce17885be41eb04e
-void manhattan_distance(dif_arr)
-{
-	double distance = dif_arr[0] + dif_arr[1] + dif_arr[2];
-	cout << setprecision(10) << distance;
-}
 
 void euclidean(dif_arr)
 {
