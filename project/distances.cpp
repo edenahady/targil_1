@@ -4,17 +4,17 @@
 #include<vector>
 #include <iomanip>
 #include<cmath>
-#include<distances.h>
+#include"distances.h"
 
 using namespace std;
 >>>>>>> 5f32e8814c42ffe37ad185c6ce17885be41eb04e
 
-void manhattan_distance(dif_arr)
+void manhattan_distance(double[] dif_arr)
 {
 	double distance = dif_arr[0] + dif_arr[1] + dif_arr[2];
 	cout << setprecision(10) << distance;
 }
-int * difference_calculator(arr1, arr2)
+double * difference_calculator(double[] arr1, double[] arr2)
 {
 	double x_dif, y_dif, z_dif;
 	double dif_arr[];
@@ -26,7 +26,7 @@ int * difference_calculator(arr1, arr2)
 }
 
 
-void euclidean(dif_arr)
+void euclidean(double[] dif_arr)
 {
 	
 
@@ -37,14 +37,14 @@ void euclidean(dif_arr)
 }
 
 
-void chebyshev(dif_arr)
+void chebyshev(double[] dif_arr)
 {
 	double max_temp = max(dif_arr[0], diff_arr[1]);
 	max_temp = max(max_temp, diff_arr[2]);
 	cout << setprecision(10) << max_temp;
 }
 
-void canberra(dif_arr, arr1, arr2)
+void canberra(double[] dif_arr, double[] arr1, double[] arr2)
 {
 	sol1 = dif_arr[0] / (arr1[0] + arr2[0]);
 	sol2 = dif_arr[1] / (arr1[1] + arr2[1]);
@@ -53,7 +53,7 @@ void canberra(dif_arr, arr1, arr2)
 	cout << setprecision(10) << dist;
 }
 
-void minkowski(diff_arr)
+void minkowski(double[] diff_arr)
 {
 	int sum = 0;
 	for (int i = 0; i < 3; i++)
