@@ -15,7 +15,7 @@ using namespace std;
 Distances::Distances(vector<double> v1, vector<double> v2) {}
 Distances::Distances(){};
 
-vector<double> Distances:: Difference_Calculator(vector<double> v1, vector<double> v2)
+vector<double> Distances:: Difference_Calculator(vector<double>& v1, vector<double>& v2)
 {
 	vector<double> Dif_V;
 	for (int i=0; i<v1.size(); i++)
@@ -30,6 +30,7 @@ vector<double> Distances:: Difference_Calculator(vector<double> v1, vector<doubl
 }
 
 double Distances:: Manhattan_Distance(vector<double> Dif_V)
+//uses the difference and sums them
 {
 	double sum = 0;
 	for (int i=0; i<Dif_V.size(); i++)
@@ -41,6 +42,7 @@ double Distances:: Manhattan_Distance(vector<double> Dif_V)
 }
 
 double Distances::euclidean(vector<double>& Dif_V)
+//returns the square root of sum of the squares of the difference
 {
 	double dist = 0;
 	for (int i=0; i<Dif_V.size(); i++)
@@ -56,6 +58,7 @@ double Distances::euclidean(vector<double>& Dif_V)
 
 double Distances::chebyshev(vector<double> Dif_V)
 {
+//returns the max of the differences of the 2 vectors
 	double max = 0;
 	for (int i=0; i<Dif_V.size(); i++){
 		if (max<Dif_V[i])
@@ -69,6 +72,7 @@ double Distances::chebyshev(vector<double> Dif_V)
 }
 
 double Distances:: canberra(vector<double> Dif_V, vector<double> v1, vector<double> v2)
+//returns the difference between the 2 vector devided by the sum of them
 {
 	double sum = 0;
 	for (int i=0; i< Dif_V.size(); i++)
@@ -83,6 +87,7 @@ double Distances:: canberra(vector<double> Dif_V, vector<double> v1, vector<doub
 }
 
 double Distances::minkowski(vector<double>& Dif_V)
+//returns the square root of sum of the squares of the difference
 {
 	int sum = 0;
 	for (int i = 0; i < Dif_V.size(); i++)
