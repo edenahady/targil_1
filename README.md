@@ -1,5 +1,5 @@
 # targil_1
-### Instructions to run and compile part 2 of exercise 1:
+### Instructions on how to run and compile part 2 of exercise 1:
 Run the following commands on the server:
 1. git init
 2. git clone https://github.com/edenahady/targil_1.git
