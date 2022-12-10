@@ -1,8 +1,8 @@
+#include"distances.h"
 #include<iostream>
 #include<math.h>
 #include<vector>
 #include <iomanip>
-#include"distances.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <algorithm>

@@ -1,10 +1,18 @@
 //lynn molga nagar 319090965
 //eden ahady 318948106
+#include "distances.h"
+#include "distances"
+#include "knnClass.cpp"
 #include<iostream>
 #include<vector>
 #include <fstream>
 #include<iostream>
 #include<sstream>
+#include <string>
+#include <algorithm>
+#include <stdio.h>
+
+
 using namespace std;
 
 bool checkK(string kStr) //check k input is a possitive int 
@@ -36,18 +44,73 @@ bool checkDis(string disStr) //checks that the name of distance is from list
     return false;
 }
 
-bool checkFile (string fileStr) //checks that the file exists on computer
+vector< vector<string> > checkFile () //checks that the file exists on computer
 {
-    ifstream ifile;
-    ifile.open(fileStr);
-    if(ifile) 
+    vector<vector<string>> content;
+    vector<string> row;
+    string line, word;
+    ifstream infile;
+    infile.open("iris_classified.csv", ifstream::in);
+    if(infile) 
     {
-        return true;
-    } else
+         while(getline(infile, line))
+        {
+            row.clear();
+            stringstream str(line);
+            while(getline(str, word, ','))
+            {
+                
+                     row.push_back(word);
+                
+            }
+            content.push_back(row);
+        }
+        for (int i=0; i<4; i++)
+        {
+            for (int j=0; j<5; j++)
+            {
+                cout<<content[i][j] << " ";
+            }
+            
+        } 
+        infile.close();
+        return content;
+    } 
+    else
     {
-        return false;
+        cout<<"Could not open the file\n";
     }
+    infile.close();
 }
+
+// vector< vector<string> > getFileContent(string fileName, vector<vector<string>> & vecOfLines)
+// {
+//     vector<string> row;
+// string line, word;
+ 
+// fstream file (fileName, ios::in);
+// if(file.is_open())
+// {
+//     while(getline(file, line))
+//     {
+//         row.clear();
+//         stringstream str(line);
+//         while(getline(str, word, ','))
+//         {
+//             row.push_back(word);
+//             vecOfLines.push_back(row);
+//         }
+        
+//     }
+// }
+// else
+// {
+//     cout<<"Could not open the file\n";
+// }
+ 
+//  return vecOfLines;
+// }
+
 
 int main()
 {   
@@ -81,8 +144,8 @@ int main()
                     fileStr = word;
                     break;
 		
-		case 3: //more than 2 blank spaces in input
-			exit(1);	
+		        case 3: //more than 2 blank spaces in input
+			        exit(1);	
                 }
                 word = "";
             }
@@ -97,7 +160,8 @@ int main()
     int numK;
     if (checkK(kStr))
     {
-        istringstream(kStr) >>numK; //if k is a number then cast to int
+        //if k is a number then cast to int
+        istringstream(kStr) >>numK; 
     }
     else{
         exit(1);
@@ -107,9 +171,27 @@ int main()
     {
         exit(1); //exit if distance is not from list
     }
+    // string dataSets = "datasets";
+    // string dataType;
+    // if(fileStr.find("iris") >=0)
+    // {
+    //     dataType = "iris";
+    // }
+    //  if(fileStr.find("beans")>= 0)
+    // {
+    //     dataType = "beans";
+    // }
+    //  if(fileStr.find("wine")>=0)
+    // {
+    //     dataType = "wine";
+    // }
+    //string path ="../"+dataSets+"/"+dataType+"/"+fileStr;
+    vector<vector<string>> lines = checkFile();
     // if(!checkFile(fileStr))
     // {
+    //    cout << "file didn't open";
     //    exit(1);
+       
     // }
 
     string vec;
@@ -139,6 +221,10 @@ int main()
         num = "";
 
     }
-   
-
+    vector<double> doublev1;
+	doublev1.reserve(v1.size());
+	transform(v1.begin(), v1.end(), back_inserter(doublev1),
+		[](string const& val) {return stod(val); });
+    knnClass findK = knnClass(lines,doublev1, disStr,KStr);
+    map<double,int> Map = findK.makedic(lines, doublev1, disStr);
 }
