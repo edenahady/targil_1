@@ -1,33 +1,26 @@
 #include "distances.h"
-#include "distances"
-#include "KNN.cpp"
-#include <map>
+#include "KNN.h"
+#include "knnClass.h"
+#include "pair.h"
+#include <vector>
 
 using namespace std;
-class knnClass
-{
-    private:
-    vector<vector<string>> content;
-    vector<double> input;
-    string dis ;
-    int k;
 
-  public:
+
     // parameterized constructor to initialize variables
-    knnClass(vector<vector<string>> content, vector<double> input, string dis, int k) 
+    knnClass::knnClass(vector<vector<string>> content1, vector<double> input1, string dis1, int k1) 
     {
-      content = content;
-      input = input;
-      k = k;
-      dis = dis;
+      content = content1;
+      input = input1;
+      k = k1;
+      dis = dis1;
 
     }
 
-    map<double,int> makedic(vector<vector<string>> content, vector<double> input, string dis)
+    vector<Pair> knnClass::calcDist()
     {
-        map<double,int> disMap;
+        vector<Pair> Pairs;
         double distance;
-       
         for(int j=0; j<content.size(); j++)
         {
                 vector<double> disVec;
@@ -55,9 +48,8 @@ class knnClass
                 {
                     distance = vectors.minkowski(disVec, input);                  
                 }
-                disMap.insert(pair<double, int>(distance,j));
+                Pair p = Pair(distance, j);
+                Pairs.push_back(p);
         }
-        return disMap;
+        return Pairs;
     }
-
-};

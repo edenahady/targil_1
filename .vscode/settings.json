@@ -1,3 +1,11 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled"
+    "files.associations": {
+        "algorithm": "cpp",
+        "vector": "cpp",
+        "map": "cpp",
+        "iterator": "cpp",
+        "iostream": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
+    }
 }

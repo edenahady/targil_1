@@ -78,101 +78,101 @@ double Distances::minkowski(vector<double> v1, vector<double> v2)
 	return sqrt(sum);
 }
 
-int main()
-{
-	vector<string> v1;
-	vector<string> v2;
-	string num1;
-	string num2;
-	getline(cin, num1);
+// int main()
+// {
+// 	vector<string> v1;
+// 	vector<string> v2;
+// 	string num1;
+// 	string num2;
+// 	getline(cin, num1);
 	
-	for (int i = 0; i < num1.size(); i++)
-	{
-		if (num1[i] == ' ' && (i != 0 && i != num1.size() - 1))
-		{
-			continue;
-		}
-		if (isdigit(num1[i]))
-		{
-			v1.push_back(&num1[i]);
-		}
-		else
-		{
-			exit(1);
-		}
-	}
+// 	for (int i = 0; i < num1.size(); i++)
+// 	{
+// 		if (num1[i] == ' ' && (i != 0 && i != num1.size() - 1))
+// 		{
+// 			continue;
+// 		}
+// 		if (isdigit(num1[i]))
+// 		{
+// 			v1.push_back(&num1[i]);
+// 		}
+// 		else
+// 		{
+// 			exit(1);
+// 		}
+// 	}
 
-	getline(cin, num2);
-	for (int i = 0; i < num2.size(); i++)
-	{
-		if (num2[i] == ' ' && (i != 0 && i != num2.size() - 1))
-		{
-			continue;
-		}
-		if (isdigit(num2[i]))
-		{
-			v2.push_back(&num2[i]);
-		}
-		else
-		{
-			exit(1);
-		}
-	}
+// 	getline(cin, num2);
+// 	for (int i = 0; i < num2.size(); i++)
+// 	{
+// 		if (num2[i] == ' ' && (i != 0 && i != num2.size() - 1))
+// 		{
+// 			continue;
+// 		}
+// 		if (isdigit(num2[i]))
+// 		{
+// 			v2.push_back(&num2[i]);
+// 		}
+// 		else
+// 		{
+// 			exit(1);
+// 		}
+// 	}
 
-	if (v1.size() != v2.size())
-	{
-		exit(1);
-	}
+// 	if (v1.size() != v2.size())
+// 	{
+// 		exit(1);
+// 	}
 
-	vector<double> doublev1;
-	doublev1.reserve(v1.size());
-	transform(v1.begin(), v1.end(), back_inserter(doublev1),
-		[](string const& val) {return stod(val); });
+// 	vector<double> doublev1;
+// 	doublev1.reserve(v1.size());
+// 	transform(v1.begin(), v1.end(), back_inserter(doublev1),
+// 		[](string const& val) {return stod(val); });
 
-	vector<double> doublev2;
-	doublev2.reserve(v2.size());
-	transform(v2.begin(), v2.end(), back_inserter(doublev2),
-		[](string const& val) {return stod(val); });
+// 	vector<double> doublev2;
+// 	doublev2.reserve(v2.size());
+// 	transform(v2.begin(), v2.end(), back_inserter(doublev2),
+// 		[](string const& val) {return stod(val); });
 
-	Distances dis(doublev1, doublev2);
-	double euc = dis.Distances::euclidean(doublev1, doublev2);
-	double ManH = dis.Distances::Manhattan_Distance(doublev1, doublev2);
-	double cheb = dis.Distances::chebyshev(doublev1, doublev2);
-	double canb = dis.Distances::canberra(doublev1, doublev2);
-	double mink = dis.Distances::minkowski(doublev1, doublev2);
-	if (euc == round(euc)) {
-		cout << euc <<".0" << endl;
-	}
-	else
-	{
-		cout << setprecision(10) << euc << endl;
-	}
-	if (ManH == round(ManH)) {
-		cout << ManH<< ".0" << endl;
-	}
-	else
-	{
-		cout << setprecision(10) << ManH << endl;
-	}
-	if (cheb == round(cheb)) {
-		cout << cheb << ".0" << endl;
-	}
-	else
-	{
-		cout << setprecision(10) << cheb << endl;
-	}
-	if (canb == round(canb)) {
-		cout << canb << ".0" << endl;
-	}
-	else
-	{
-		cout << setprecision(10) << canb << endl;
-	}
-	if (mink == round(mink)) {
-		cout << mink << ".0" << endl;
-	}
-	else
-	{
-		cout << setprecision(10) << mink << endl;
-	}
-}
+// 	Distances dis(doublev1, doublev2);
+// 	double euc = dis.Distances::euclidean(doublev1, doublev2);
+// 	double ManH = dis.Distances::Manhattan_Distance(doublev1, doublev2);
+// 	double cheb = dis.Distances::chebyshev(doublev1, doublev2);
+// 	double canb = dis.Distances::canberra(doublev1, doublev2);
+// 	double mink = dis.Distances::minkowski(doublev1, doublev2);
+// 	if (euc == round(euc)) {
+// 		cout << euc <<".0" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << setprecision(10) << euc << endl;
+// 	}
+// 	if (ManH == round(ManH)) {
+// 		cout << ManH<< ".0" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << setprecision(10) << ManH << endl;
+// 	}
+// 	if (cheb == round(cheb)) {
+// 		cout << cheb << ".0" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << setprecision(10) << cheb << endl;
+// 	}
+// 	if (canb == round(canb)) {
+// 		cout << canb << ".0" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << setprecision(10) << canb << endl;
+// 	}
+// 	if (mink == round(mink)) {
+// 		cout << mink << ".0" << endl;
+// 	}
+// 	else
+// 	{
+// 		cout << setprecision(10) << mink << endl;
+// 	}
+// }

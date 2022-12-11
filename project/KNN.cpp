@@ -1,8 +1,9 @@
 //lynn molga nagar 319090965
 //eden ahady 318948106
 #include "distances.h"
-#include "distances"
-#include "knnClass.cpp"
+#include "KNN.h"
+#include "knnClass.h"
+#include "pair.h"
 #include<iostream>
 #include<vector>
 #include <fstream>
@@ -11,11 +12,14 @@
 #include <string>
 #include <algorithm>
 #include <stdio.h>
+#include <map>
 
 
 using namespace std;
 
-bool checkK(string kStr) //check k input is a possitive int 
+KNN::KNN(string kStr, string disStr, string fileStr){};
+
+bool KNN::checkK(string kStr) //check k input is a possitive int 
 {
     for (int i=0; i<kStr.size(); i++)
     {
@@ -35,7 +39,7 @@ bool checkK(string kStr) //check k input is a possitive int
     return true;
 }
 
-bool checkDis(string disStr) //checks that the name of distance is from list
+bool KNN::checkDis(string disStr) //checks that the name of distance is from list
 {
     if(disStr == "AUC" || disStr == "MAN" || disStr == "CHB" || disStr == "CAN" || disStr == "MIN")
     {
@@ -44,7 +48,7 @@ bool checkDis(string disStr) //checks that the name of distance is from list
     return false;
 }
 
-vector< vector<string> > checkFile () //checks that the file exists on computer
+vector< vector<string> > KNN::checkFile () //checks that the file exists on computer
 {
     vector<vector<string>> content;
     vector<string> row;
@@ -71,7 +75,10 @@ vector< vector<string> > checkFile () //checks that the file exists on computer
             {
                 cout<<content[i][j] << " ";
             }
-            
+            if(i==3)
+            {
+                cout<<endl;
+            }
         } 
         infile.close();
         return content;
@@ -81,6 +88,8 @@ vector< vector<string> > checkFile () //checks that the file exists on computer
         cout<<"Could not open the file\n";
     }
     infile.close();
+    vector<vector<string>> empty;
+    return empty;
 }
 
 // vector< vector<string> > getFileContent(string fileName, vector<vector<string>> & vecOfLines)
@@ -121,6 +130,7 @@ int main()
     string word = "";
     getline(cin, str); //get input from user
     int count = 0;
+    KNN obj = KNN(kStr,disStr,fileStr);
     bool f = true;
     for (auto x : str)
     {
@@ -158,7 +168,7 @@ int main()
     }
     disStr = word;
     int numK;
-    if (checkK(kStr))
+    if (obj.checkK(kStr))
     {
         //if k is a number then cast to int
         istringstream(kStr) >>numK; 
@@ -167,7 +177,7 @@ int main()
         exit(1);
     }
 
-    if(!checkDis(disStr))
+    if(!obj.checkDis(disStr))
     {
         exit(1); //exit if distance is not from list
     }
@@ -186,7 +196,7 @@ int main()
     //     dataType = "wine";
     // }
     //string path ="../"+dataSets+"/"+dataType+"/"+fileStr;
-    vector<vector<string>> lines = checkFile();
+    vector<vector<string>> lines = obj.checkFile();
     // if(!checkFile(fileStr))
     // {
     //    cout << "file didn't open";
@@ -225,6 +235,16 @@ int main()
 	doublev1.reserve(v1.size());
 	transform(v1.begin(), v1.end(), back_inserter(doublev1),
 		[](string const& val) {return stod(val); });
-    knnClass findK = knnClass(lines,doublev1, disStr,KStr);
-    map<double,int> Map = findK.makedic(lines, doublev1, disStr);
+    knnClass findK = knnClass(lines,doublev1, disStr,numK);
+    vector<Pair> pairs = findK.calcDist();
+    sort(pairs.begin(), pairs.end(), [](Pair a,Pair b) {
+    return a.getval() < b.getval();
+  });
+  for (int i=0;i<7;i++)
+  {
+    for (int j=0;j<2;j++){
+        cout<<pairs[i].getval() << " "<<pairs[i].getindex()<<endl;
+    }
+  }
+    
 }
