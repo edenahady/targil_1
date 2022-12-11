@@ -53,3 +53,37 @@ using namespace std;
         }
         return Pairs;
     }
+
+    vector<Pair> knnClass::sortvec(vector<Pair> pairs)
+    {
+        sort(pairs.begin(), pairs.end(), [](Pair a,Pair b) {
+        return a.getval() < b.getval();});
+        return pairs;
+    }
+
+    string knnClass::classification(vector<Pair> pairs)
+    {
+        map<string, int> classCount;
+        string s;
+        int count = 0;
+        for (int i=0; i<k; i++)
+        {
+            int index_in_vec = pairs[i].getindex();
+            int size_of_inner_vec = content[index_in_vec].size()-1;
+            
+            for (int j=0; j<k; j++)
+            {
+                int index_in_vecJ = pairs[j].getindex();
+                int size_of_inner_vecJ = content[index_in_vec].size()-1;
+                
+                s = content[index_in_vec][size_of_inner_vec];
+                
+                if (s == content[index_in_vecJ][size_of_inner_vecJ])
+                {
+                    count++;
+                }
+            }
+            classCount.insert(make_pair(s,count));
+        }
+        return classCount.rbegin()->first;
+    }

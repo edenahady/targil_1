@@ -237,14 +237,7 @@ int main()
 		[](string const& val) {return stod(val); });
     knnClass findK = knnClass(lines,doublev1, disStr,numK);
     vector<Pair> pairs = findK.calcDist();
-    sort(pairs.begin(), pairs.end(), [](Pair a,Pair b) {
-    return a.getval() < b.getval();
-  });
-  for (int i=0;i<7;i++)
-  {
-    for (int j=0;j<2;j++){
-        cout<<pairs[i].getval() << " "<<pairs[i].getindex()<<endl;
-    }
-  }
-    
+    pairs = findK.sortvec(pairs);
+    string s = findK.classification(pairs);
+    cout<<s;
 }
