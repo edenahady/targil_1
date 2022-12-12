@@ -231,6 +231,13 @@ int main()
         num = "";
 
     }
+	//for i<line.size-1{
+	// if line[1].size != line[i].size){
+	//print not same size + exit(1);}}
+	if (v1.size() != line[1].size())
+	{
+		exit(1);
+	}
     vector<double> doublev1;
 	doublev1.reserve(v1.size());
 	transform(v1.begin(), v1.end(), back_inserter(doublev1),
