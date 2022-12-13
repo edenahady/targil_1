@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/targil_2.dir/project/KNN.cpp.o CMakeFiles/targil_2.dir/project/knnClass.cpp.o CMakeFiles/targil_2.dir/project/pair.cpp.o CMakeFiles/targil_2.dir/project/distances.cpp.o  -o targil_2 
