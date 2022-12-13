@@ -203,19 +203,7 @@ int main(int argc, char* argv[])
     //    exit(1);
        
     // }
-    string vec = "";
-    for(int i=4; i<argc; i++)
-    {
-        if(i!=argc-1)
-        {
-            vec = vec + string(argv[i]) + " ";
-        }
-        else
-        {
-            vec = vec + string(argv[i]);
-        }
-
-    }
+    string vec;
     string num;
     getline(cin, vec);
     vector<string> v1;
@@ -249,7 +237,7 @@ int main(int argc, char* argv[])
              exit(1);
         }
     }
-	if (v1.size() != lines[1].size())
+	if (v1.size() != lines[1].size()-1)
 	{
 		exit(1);
 	}
