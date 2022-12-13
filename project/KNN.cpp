@@ -54,7 +54,7 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
     vector<string> row;
     string line, word;
     ifstream infile;
-    string path ="../"+dataSets+"/"+dataType+"/"+fileStr;
+    string path =dataSets+"/"+dataType+"/"+fileStr;
     infile.open(path, ifstream::in);
     if(infile) 
     {
@@ -122,52 +122,52 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
 // }
 
 
-int main()
+int main(int argc, char* argv[])
 {   
     string str;
-    string kStr;
-    string fileStr;
-    string disStr;
+    string kStr = argv[1];
+    string fileStr = argv[2];
+    string disStr = argv[3];
     string word = "";
-    getline(cin, str); //get input from user
+    //getline(cin, str); //get input from user
     int count = 0;
     KNN obj = KNN(kStr,disStr,fileStr);
     bool f = true;
-    for (auto x : str)
-    {
-        if (x == ' ')
-        {
-            if(f == true) 
-            {
-                exit(1); //first character is blank space
-            }
-            else
-            {
-                count++;
+    // for (auto x : str)
+    // {
+    //     if (x == ' ')
+    //     {
+    //         if(f == true) 
+    //         {
+    //             exit(1); //first character is blank space
+    //         }
+    //         else
+    //         {
+    //             count++;
                 
-                switch (count)
-                {
-                case 1:
-                     kStr = word;
-                    break;
+    //             switch (count)
+    //             {
+    //             case 1:
+    //                  kStr = word;
+    //                 break;
                 
-                case 2:
-                    fileStr = word;
-                    break;
+    //             case 2:
+    //                 fileStr = word;
+    //                 break;
 		
-		        case 3: //more than 2 blank spaces in input
-			        exit(1);	
-                }
-                word = "";
-            }
-        }
-        else 
-        {
-            word = word + x; //adds characters to word
-            f = false;
-        }
-    }
-    disStr = word;
+	// 	        case 3: //more than 2 blank spaces in input
+	// 		        exit(1);	
+    //             }
+    //             word = "";
+    //         }
+    //     }
+    //     else 
+    //     {
+    //         word = word + x; //adds characters to word
+    //         f = false;
+    //     }
+    // }
+    // disStr = word;
     int numK;
     if (obj.checkK(kStr))
     {
@@ -184,15 +184,15 @@ int main()
     }
     string dataSets = "datasets";
     string dataType;
-    if(fileStr.find("iris") >=0)
+    if(fileStr.find("iris") != string::npos)
     {
         dataType = "iris";
     }
-     if(fileStr.find("beans")>= 0)
+     if(fileStr.find("beans")!= string::npos)
     {
         dataType = "beans";
     }
-     if(fileStr.find("wine")>=0)
+     if(fileStr.find("wine")!= string::npos)
     {
         dataType = "wine";
     }
@@ -203,8 +203,19 @@ int main()
     //    exit(1);
        
     // }
+    string vec = "";
+    for(int i=4; i<argc; i++)
+    {
+        if(i!=argc-1)
+        {
+            vec = vec + string(argv[i]) + " ";
+        }
+        else
+        {
+            vec = vec + string(argv[i]);
+        }
 
-    string vec;
+    }
     string num;
     getline(cin, vec);
     vector<string> v1;
@@ -231,10 +242,14 @@ int main()
         num = "";
 
     }
-	//for i<line.size-1{
-	// if line[1].size != line[i].size){
-	//print not same size + exit(1);}}
-	if (v1.size() != line[1].size())
+	for(int i=0; i<lines.size(); i++)
+    {
+	    if (lines[1].size() != lines[i].size())
+        {
+             exit(1);
+        }
+    }
+	if (v1.size() != lines[1].size())
 	{
 		exit(1);
 	}
