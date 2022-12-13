@@ -54,8 +54,8 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
     vector<string> row;
     string line, word;
     ifstream infile;
-    string path =dataSets+"/"+dataType+"/"+fileStr;
-    infile.open(path, ifstream::in);
+    string path =dataSets+"/"+dataType+"/"+fileStr; //creates path
+    infile.open(path, ifstream::in); //opens file
     if(infile) 
     {
          while(getline(infile, line))
@@ -65,22 +65,12 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
             while(getline(str, word, ','))
             {
                 
-                     row.push_back(word);
+                     row.push_back(word); //inserts into inner vector
                 
             }
-            content.push_back(row);
+            content.push_back(row); //inserts into outer vector
         }
-        for (int i=0; i<4; i++)
-        {
-            for (int j=0; j<5; j++)
-            {
-                cout<<content[i][j] << " ";
-            }
-            if(i==3)
-            {
-                cout<<endl;
-            }
-        } 
+     } 
         infile.close();
         return content;
     } 
@@ -93,35 +83,6 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
     return empty;
 }
 
-// vector< vector<string> > getFileContent(string fileName, vector<vector<string>> & vecOfLines)
-// {
-//     vector<string> row;
-// string line, word;
- 
-// fstream file (fileName, ios::in);
-// if(file.is_open())
-// {
-//     while(getline(file, line))
-//     {
-//         row.clear();
-//         stringstream str(line);
-//         while(getline(str, word, ','))
-//         {
-//             row.push_back(word);
-//             vecOfLines.push_back(row);
-//         }
-        
-//     }
-// }
-// else
-// {
-//     cout<<"Could not open the file\n";
-// }
- 
-//  return vecOfLines;
-// }
-
-
 int main(int argc, char* argv[])
 {   
     string str;
@@ -129,45 +90,7 @@ int main(int argc, char* argv[])
     string fileStr = argv[2];
     string disStr = argv[3];
     string word = "";
-    //getline(cin, str); //get input from user
-    int count = 0;
     KNN obj = KNN(kStr,disStr,fileStr);
-    bool f = true;
-    // for (auto x : str)
-    // {
-    //     if (x == ' ')
-    //     {
-    //         if(f == true) 
-    //         {
-    //             exit(1); //first character is blank space
-    //         }
-    //         else
-    //         {
-    //             count++;
-                
-    //             switch (count)
-    //             {
-    //             case 1:
-    //                  kStr = word;
-    //                 break;
-                
-    //             case 2:
-    //                 fileStr = word;
-    //                 break;
-		
-	// 	        case 3: //more than 2 blank spaces in input
-	// 		        exit(1);	
-    //             }
-    //             word = "";
-    //         }
-    //     }
-    //     else 
-    //     {
-    //         word = word + x; //adds characters to word
-    //         f = false;
-    //     }
-    // }
-    // disStr = word;
     int numK;
     if (obj.checkK(kStr))
     {
@@ -184,7 +107,7 @@ int main(int argc, char* argv[])
     }
     string dataSets = "datasets";
     string dataType;
-    if(fileStr.find("iris") != string::npos)
+    if(fileStr.find("iris") != string::npos) //checks type of file
     {
         dataType = "iris";
     }
@@ -197,15 +120,9 @@ int main(int argc, char* argv[])
         dataType = "wine";
     }
     vector<vector<string>> lines = obj.checkFile(dataType, fileStr, dataSets);
-    // if(!checkFile(fileStr))
-    // {
-    //    cout << "file didn't open";
-    //    exit(1);
-       
-    // }
     string vec;
     string num;
-    getline(cin, vec);
+    getline(cin, vec); //gets vector from user
     vector<string> v1;
     for (int i = 0; i < vec.size(); i++)
     {
@@ -230,24 +147,24 @@ int main(int argc, char* argv[])
         num = "";
 
     }
-	for(int i=0; i<lines.size(); i++)
+	for(int i=0; i<lines.size(); i++) //checks that the sizes of the vectors in the file are the same
     {
 	    if (lines[1].size() != lines[i].size())
         {
              exit(1);
         }
     }
-	if (v1.size() != lines[1].size()-1)
+	if (v1.size() != lines[1].size()-1) //checks that the size of users vector is the same as file
 	{
 		exit(1);
 	}
     vector<double> doublev1;
 	doublev1.reserve(v1.size());
 	transform(v1.begin(), v1.end(), back_inserter(doublev1),
-		[](string const& val) {return stod(val); });
-    knnClass findK = knnClass(lines,doublev1, disStr,numK);
-    vector<Pair> pairs = findK.calcDist();
-    pairs = findK.sortvec(pairs);
-    string s = findK.classification(pairs);
+		[](string const& val) {return stod(val); }); //casts string vector into double
+    knnClass findK = knnClass(lines,doublev1, disStr,numK); //knnclass object
+    vector<Pair> pairs = findK.calcDist(); //claculates the distance using the distance given
+    pairs = findK.sortvec(pairs); //sorts the vector of pairs
+    string s = findK.classification(pairs); //finds classification
     cout<<s;
 }
