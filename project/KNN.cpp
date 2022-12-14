@@ -73,7 +73,6 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
      } 
         infile.close();
         return content;
-    } 
     else
     {
         cout<<"Could not open the file\n";
