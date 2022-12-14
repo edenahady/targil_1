@@ -56,23 +56,21 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
     ifstream infile;
     string path =dataSets+"/"+dataType+"/"+fileStr; //creates path
     infile.open(path, ifstream::in); //opens file
-    if(infile) 
-    {
-         while(getline(infile, line))
-        {
+    if(infile) {
+        while (getline(infile, line)) {
             row.clear();
             stringstream str(line);
-            while(getline(str, word, ','))
-            {
-                
-                     row.push_back(word); //inserts into inner vector
-                
+            while (getline(str, word, ',')) {
+
+                row.push_back(word); //inserts into inner vector
+
             }
             content.push_back(row); //inserts into outer vector
         }
-     } 
+
         infile.close();
         return content;
+    }
     else
     {
         cout<<"Could not open the file\n";
