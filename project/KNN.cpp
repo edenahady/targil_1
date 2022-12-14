@@ -70,7 +70,7 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
             }
             content.push_back(row); //inserts into outer vector
         }
-
+     } 
         infile.close();
         return content;
     } 
