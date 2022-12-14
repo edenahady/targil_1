@@ -54,6 +54,22 @@ using namespace std;
         return Pairs;
     }
 
+    string knnClass::biggestCount(map<string,int> classCount)
+    {
+        int maxCount = 0;
+        string type;
+        for (const auto& element : classCount)
+        {
+            if (element.second > maxCount)
+            {
+                maxCount = element.second;
+                type = element.first;
+            }
+        }
+        return type;
+    }
+
+
     vector<Pair> knnClass::sortvec(vector<Pair> pairs) //sorts vector
     {
         sort(pairs.begin(), pairs.end(), [](Pair a,Pair b) {
@@ -85,5 +101,6 @@ using namespace std;
             }
             classCount.insert(make_pair(s,count));
         }
-        return classCount.rbegin()->first; //returns the value of the last key in map (the biggest count)
+        string type = biggestCount(classCount);
+        return type; //returns the value of the key with the biggest count
     }
