@@ -134,7 +134,7 @@ int main(int argc, char* argv[])
                 i++;
             }
             for (int j = 0; j < num.size(); j++) {
-                if (!isdigit(num[j]) && num[j] != '.') //check that it is a number and not a letter or symbol
+                if (!isdigit(num[j]) && num[j] != '.' && num[j] != 'e') //check that it is a number and not a letter or symbol
                 {
                     exit(1);
                 }
