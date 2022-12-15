@@ -1,4 +1,4 @@
-# targil_1
+# targil_2!
 ### Instructions on how to run and compile part 2 of exercise 1:
 Run the following commands on the server:
 1. git init
