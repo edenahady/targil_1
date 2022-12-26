@@ -52,6 +52,26 @@ algorithm
 stdio.h
 -
 
+/mnt/c/Users/edena/CLionProjects/targil_1/project/distances.cpp
+distances.h
+/mnt/c/Users/edena/CLionProjects/targil_1/project/distances.h
+iostream
+-
+math.h
+-
+vector
+-
+iomanip
+-
+ctype.h
+-
+stdio.h
+-
+algorithm
+-
+string
+-
+
 /mnt/c/Users/edena/CLionProjects/targil_1/project/distances.h
 iostream
 -
