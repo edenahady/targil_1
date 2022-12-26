@@ -6,7 +6,7 @@
 #define PROJECT_SERVER_H
 
 #endif //PROJECT_SERVER_H
-class server
+class Server
 {
 public:
     int createServer(int server_port);
