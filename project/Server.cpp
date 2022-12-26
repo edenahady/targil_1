@@ -1,7 +1,7 @@
 //
 // Created by edena on 12/25/2022.
 //
-#include "server.h"
+#include "Server.h"
 #include <iostream>
 #include <sys/socket.h>
 #include <stdio.h>
