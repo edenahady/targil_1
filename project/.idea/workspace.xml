@@ -13,9 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4226d74-76d6-40ef-be78-e9f10cf52450" name="Changes" comment="server">
+      <change afterPath="$PROJECT_DIR$/Client.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/server.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KNN.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/KNN.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KNN.h" beforeDir="false" afterPath="$PROJECT_DIR$/KNN.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.h" beforeDir="false" afterPath="$PROJECT_DIR$/Server.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/Client.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/Client.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +64,15 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CPPToolchains",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\edena\CLionProjects\targil_1\project" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670947065553</updated>
       <workItem from="1670947066818" duration="3000" />
-      <workItem from="1671971875645" duration="3611000" />
+      <workItem from="1671971875645" duration="13733000" />
     </task>
     <task id="LOCAL-00001" summary="server">
       <created>1672068521638</created>
@@ -79,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672068521638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="server">
+      <created>1672070449901</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672070449902</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

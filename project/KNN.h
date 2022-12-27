@@ -18,4 +18,5 @@ public:
     bool checkK(string kStr);
     bool checkDis(string disStr);
     vector< vector<string> > checkFile (string dataType, string fileStr, string dataSets);
+    string Check_Input(char buffer[], string file);
 };

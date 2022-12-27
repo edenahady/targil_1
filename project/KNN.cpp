@@ -80,27 +80,66 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
     return empty;
 }
 
-int main(int argc, char* argv[])
-{   
-    string str;
-    string kStr = argv[1];
-    string fileStr = argv[2];
-    string disStr = argv[3];
-    string word = "";
-    KNN obj = KNN(kStr,disStr,fileStr);
+string KNN::Check_Input(char buffer[], string file)
+{
+    char Vec_Arr[];
+    string kStr;
+    string fileStr;
+    char disStr[];
+    int man = fileStr.find("MAN") //checks type of file
+    if (man >= 0) {
+        strncpy(Vec_Arr, buffer, man)
+        strncpy(disStr, buffer + man, buffer.size())
+    }
+    int auc = fileStr.find("AUC") //checks type of file
+    if (auc >= 0) {
+        strncpy(Vec_Arr, buffer, auc)
+        strncpy(disStr, buffer + auc, buffer.size())
+    }
+    int chb = fileStr.find("CHB") //checks type of file
+    else if (chb >= 0) {
+        strncpy(Vec_Arr, buffer, chb)
+        strncpy(disStr, buffer + chb, buffer.size())
+    }
+    int can = fileStr.find("CAN") //checks type of file
+    else if (can >= 0) {
+        strncpy(Vec_Arr, buffer, can)
+        strncpy(disStr, buffer + can, buffer.size())
+    }
+    int min = fileStr.find("MIN") //checks type of file
+    else if (min >= 0) {
+        strncpy(Vec_Arr, buffer, min)
+        strncpy(disStr, buffer + min, buffer.size())
+    } else {
+        return "invalid input";
+    }
+    string distance(disStr);
+    string vecStr(Vec_Arr);
+    int count = 0;
+    istringstream iss(distance);
+    while (s.find(' ') != string::npos)
+    {
+        getline(iss, kStr, ' ')
+        count++;
+    }
+    if (count != 1)
+    {
+        return "invalid input";
+    }
+    KNN obj = KNN(kStr,disStr,file);
     int numK;
     if (obj.checkK(kStr))
     {
-        //if k is a number then cast to int
+        //if k is a number than cast to int
         istringstream(kStr) >>numK; 
     }
     else{
-        exit(1);
+        return "invalid input";
     }
 
     if(!obj.checkDis(disStr))
     {
-        exit(1); //exit if distance is not from list
+        return "invalid input";
     }
     string dataSets = "datasets";
     string dataType;
@@ -117,51 +156,51 @@ int main(int argc, char* argv[])
         dataType = "wine";
     }
     vector<vector<string>> lines = obj.checkFile(dataType, fileStr, dataSets);
-    string vec;
     string num;
-    while(true) {
-        getline(cin, vec); //gets vector from user
-        vector<string> v1;
-        for (int i = 0; i < vec.size(); i++) {
-            if (vec[i] == ' ' &&
-                (i != 0 && i != vec.size() - 1)) //check that there are no blank spaces before or after vector input
-            {
-                continue;
-            }
-            while (vec[i] != ' ' && i < vec.size()) //if not space
-            {
-                num.push_back(vec[i]);
-                i++;
-            }
-            for (int j = 0; j < num.size(); j++) {
-                if (!isdigit(num[j]) && num[j] != '.' && num[j] != 'e') //check that it is a number and not a letter or symbol
-                {
-                    exit(1);
-                }
-
-            }
-            v1.push_back(num);
-            num = "";
-
-        }
-        for (int i = 0; i < lines.size(); i++) //checks that the sizes of the vectors in the file are the same
-        {
-            if (lines[1].size() != lines[i].size()) {
-                exit(1);
-            }
-        }
-        if (v1.size() != lines[1].size() - 1) //checks that the size of users vector is the same as file
-        {
-            exit(1);
-        }
-        vector<double> doublev1;
-        doublev1.reserve(v1.size());
-        transform(v1.begin(), v1.end(), back_inserter(doublev1),
-                  [](string const &val) { return stod(val); }); //casts string vector into double
-        knnClass findK = knnClass(lines, doublev1, disStr, numK); //knnclass object
-        vector<Pair> pairs = findK.calcDist(); //claculates the distance using the distance given
-        pairs = findK.sortvec(pairs); //sorts the vector of pairs
-        string s = findK.classification(pairs); //finds classification
-        cout << s<<endl;
+    if (lines.empty())
+    {
+        return "invalid input";
     }
+    vector<string> v1;
+    for (int i = 0; i < vecStr.size(); i++) {
+        if (vecStr[i] == ' ' &&
+            (i != 0 && i != vecStr.size() - 1)) //check that there are no blank spaces before or after vector input
+        {
+            continue;
+        }
+        while (vecStr[i] != ' ' && i < vecStr.size()) //if not space
+        {
+            num.push_back(vecStr[i]);
+            i++;
+        }
+        for (int j = 0; j < num.size(); j++) {
+            if (!isdigit(num[j]) && num[j] != '.' && num[j] != 'e') //check that it is a number and not a letter or symbol
+            {
+                return "invalid input";
+            }
+
+        }
+        v1.push_back(num);
+        num = "";
+
+    }
+    for (int i = 0; i < lines.size(); i++) //checks that the sizes of the vectors in the file are the same
+    {
+        if (lines[1].size() != lines[i].size()) {
+            return "invalid input";
+        }
+    }
+    if (v1.size() != lines[1].size() - 1) //checks that the size of users vector is the same as file
+    {
+        return "invalid input";
+    }
+    vector<double> doublev1;
+    doublev1.reserve(v1.size());
+    transform(v1.begin(), v1.end(), back_inserter(doublev1),
+              [](string const &val) { return stod(val); }); //casts string vector into double
+    knnClass findK = knnClass(lines, doublev1, disStr, numK); //knnclass object
+    vector<Pair> pairs = findK.calcDist(); //claculates the distance using the distance given
+    pairs = findK.sortvec(pairs); //sorts the vector of pairs
+    string s = findK.classification(pairs); //finds classification
+    return s;
 }

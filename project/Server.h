@@ -9,5 +9,5 @@
 class Server
 {
 public:
-    int createServer(int server_port);
+    int CreateServer(int server_port);
 };

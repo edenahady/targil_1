@@ -2,6 +2,7 @@
 // Created by edena on 12/25/2022.
 //
 #include "Server.h"
+#include "KNN.h"
 #include <iostream>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -11,7 +12,7 @@
 #include <string.h>
 
 using namespace std;
-int createServer(int server_port, string file) {
+int CreateServer(int server_port, string file) {
     while(true) {
         //socket creation,SOCK_STREAM is a const for TCP
 
@@ -44,11 +45,13 @@ int createServer(int server_port, string file) {
         recieve
         int read_bytes = recv(client_sock, buffer, expected_data_len, 0);//recieve a message from the clients socket into the buffer
         if (read_bytes == 0) {
-        // connection is closed
+            perror("connection is closed");
         } else if (read_bytes < 0) {
-        // error
+            perror("error receiving from client");
         } else {
-            cout << buffer;
+            string classification = KNN.Check_Input(buffer, file)
+            // recieve back a classification or invalid
+            // send back to client
         }
         int sent_bytes = send(client_sock, buffer, read_bytes, 0);
         if (sent_bytes < 0) {
@@ -61,11 +64,12 @@ int createServer(int server_port, string file) {
 }
 int main(int argc, char* argv[])
 {
-    string port_str = argv[1];
-    string file = argv[2];
+    string port_str = argv[2];
+    string file = argv[1];
     int port = stoi(port_str);
     if(port < 1024 or port > 65535)
     {
         cout<< "port number is not valid"
     }
+    int rec = CreateServer(port, file)
 }
