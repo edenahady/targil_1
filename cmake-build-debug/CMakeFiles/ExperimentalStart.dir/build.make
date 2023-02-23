@@ -63,10 +63,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/edena/CLionProjects/targil_1
+CMAKE_SOURCE_DIR = /mnt/c/Users/valle/CLionProjects/redo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug
 
 # Utility rule file for ExperimentalStart.
 
@@ -91,6 +91,6 @@ CMakeFiles/ExperimentalStart.dir/clean:
 .PHONY : CMakeFiles/ExperimentalStart.dir/clean
 
 CMakeFiles/ExperimentalStart.dir/depend:
-	cd /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/edena/CLionProjects/targil_1 /mnt/c/Users/edena/CLionProjects/targil_1 /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/valle/CLionProjects/redo /mnt/c/Users/valle/CLionProjects/redo /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalStart.dir/depend
 

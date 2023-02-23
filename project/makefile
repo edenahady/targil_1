@@ -9,7 +9,7 @@ knnClass.o:
 	
 distances.o:
 	g++ -std=c++11 -c distances.cpp distances.h
-	
+
 pair.o:
 	g++ -std=c++11 -c pair.cpp pair.h
 	
@@ -17,4 +17,4 @@ target: dependencies
 	action
 	
 clean:
-	rm *.o .h.gch a.out
+	rm *.o *.h.gch a.out

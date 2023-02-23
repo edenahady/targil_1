@@ -48,15 +48,12 @@ bool KNN::checkDis(string disStr) //checks that the name of distance is from lis
     return false;
 }
 
-vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string dataSets) //checks that the file exists on computer
-{
+vector< vector<string> > KNN::checkFile (string fileStr) { //checks that the file exists on computer
     vector<vector<string>> content;
     vector<string> row;
     string line, word;
-    ifstream infile;
-    string path =dataSets+"/"+dataType+"/"+fileStr; //creates path
-    infile.open(path, ifstream::in); //opens file
-    if(infile) {
+    ifstream infile(fileStr);
+    if (infile) {
         while (getline(infile, line)) {
             row.clear();
             stringstream str(line);
@@ -67,13 +64,13 @@ vector< vector<string> > KNN::checkFile (string dataType, string fileStr, string
             }
             content.push_back(row); //inserts into outer vector
         }
-
         infile.close();
         return content;
     }
     else
     {
         cout<<"Could not open the file\n";
+        exit(1);
     }
     infile.close();
     vector<vector<string>> empty;
@@ -102,21 +99,8 @@ int main(int argc, char* argv[])
     {
         exit(1); //exit if distance is not from list
     }
-    string dataSets = "datasets";
-    string dataType;
-    if(fileStr.find("iris") != string::npos) //checks type of file
-    {
-        dataType = "iris";
-    }
-     if(fileStr.find("beans")!= string::npos)
-    {
-        dataType = "beans";
-    }
-     if(fileStr.find("wine")!= string::npos)
-    {
-        dataType = "wine";
-    }
-    vector<vector<string>> lines = obj.checkFile(dataType, fileStr, dataSets);
+
+    vector<vector<string>> lines = obj.checkFile(fileStr);
     string vec;
     string num;
     while(true) {

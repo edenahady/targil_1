@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.cpp" "/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/targil_2.dir/project/KNN.cpp.o"
-  "/mnt/c/Users/edena/CLionProjects/targil_1/project/distances.cpp" "/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/targil_2.dir/project/distances.cpp.o"
-  "/mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.cpp" "/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/targil_2.dir/project/knnClass.cpp.o"
-  "/mnt/c/Users/edena/CLionProjects/targil_1/project/pair.cpp" "/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/targil_2.dir/project/pair.cpp.o"
+  "/mnt/c/Users/valle/CLionProjects/redo/project/KNN.cpp" "/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/targil_2.dir/project/KNN.cpp.o"
+  "/mnt/c/Users/valle/CLionProjects/redo/project/distances.cpp" "/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/targil_2.dir/project/distances.cpp.o"
+  "/mnt/c/Users/valle/CLionProjects/redo/project/knnClass.cpp" "/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/targil_2.dir/project/knnClass.cpp.o"
+  "/mnt/c/Users/valle/CLionProjects/redo/project/pair.cpp" "/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/targil_2.dir/project/pair.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

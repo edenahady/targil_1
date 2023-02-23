@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /mnt/c/Users/edena/CLionProjects/targil_1
-BuildDirectory: /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug
+SourceDirectory: /mnt/c/Users/valle/CLionProjects/redo
+BuildDirectory: /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: DESKTOP-21PHEAS
+Site: DESKTOP-IESIP0V
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/bin/cmake" "/mnt/c/Users/edena/CLionProjects/targil_1"
+ConfigureCommand: "/usr/local/bin/cmake" "/mnt/c/Users/valle/CLionProjects/redo"
 MakeCommand: /usr/local/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -63,7 +63,7 @@ UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++
-CompilerVersion: 9.4.0
+CompilerVersion: 11.3.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 

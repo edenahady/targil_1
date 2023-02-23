@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.cpp
+/mnt/c/Users/valle/CLionProjects/redo/project/KNN.cpp
 distances.h
-/mnt/c/Users/edena/CLionProjects/targil_1/project/distances.h
+/mnt/c/Users/valle/CLionProjects/redo/project/distances.h
 KNN.h
-/mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.h
+/mnt/c/Users/valle/CLionProjects/redo/project/KNN.h
 knnClass.h
-/mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.h
+/mnt/c/Users/valle/CLionProjects/redo/project/knnClass.h
 pair.h
-/mnt/c/Users/edena/CLionProjects/targil_1/project/pair.h
+/mnt/c/Users/valle/CLionProjects/redo/project/pair.h
 iostream
 -
 vector
@@ -34,7 +34,7 @@ stdio.h
 map
 -
 
-/mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.h
+/mnt/c/Users/valle/CLionProjects/redo/project/KNN.h
 iostream
 -
 vector
@@ -52,7 +52,7 @@ algorithm
 stdio.h
 -
 
-/mnt/c/Users/edena/CLionProjects/targil_1/project/distances.h
+/mnt/c/Users/valle/CLionProjects/redo/project/distances.h
 iostream
 -
 math.h
@@ -64,13 +64,29 @@ iomanip
 cmath
 -
 
-/mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.h
+/mnt/c/Users/valle/CLionProjects/redo/project/knnClass.cpp
+distances.h
+/mnt/c/Users/valle/CLionProjects/redo/project/distances.h
+KNN.h
+/mnt/c/Users/valle/CLionProjects/redo/project/KNN.h
+knnClass.h
+/mnt/c/Users/valle/CLionProjects/redo/project/knnClass.h
 pair.h
-/mnt/c/Users/edena/CLionProjects/targil_1/project/pair.h
+/mnt/c/Users/valle/CLionProjects/redo/project/pair.h
+vector
+-
+string
+-
+
+/mnt/c/Users/valle/CLionProjects/redo/project/knnClass.h
+pair.h
+/mnt/c/Users/valle/CLionProjects/redo/project/pair.h
 map
 -
 vector
 -
+string
+-
 
-/mnt/c/Users/edena/CLionProjects/targil_1/project/pair.h
+/mnt/c/Users/valle/CLionProjects/redo/project/pair.h
 

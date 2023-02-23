@@ -63,10 +63,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/edena/CLionProjects/targil_1
+CMAKE_SOURCE_DIR = /mnt/c/Users/valle/CLionProjects/redo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/targil_2.dir/depend.make
@@ -79,55 +79,55 @@ include CMakeFiles/targil_2.dir/flags.make
 
 CMakeFiles/targil_2.dir/project/KNN.cpp.o: CMakeFiles/targil_2.dir/flags.make
 CMakeFiles/targil_2.dir/project/KNN.cpp.o: ../project/KNN.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/targil_2.dir/project/KNN.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/KNN.cpp.o -c /mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/targil_2.dir/project/KNN.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/KNN.cpp.o -c /mnt/c/Users/valle/CLionProjects/redo/project/KNN.cpp
 
 CMakeFiles/targil_2.dir/project/KNN.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/targil_2.dir/project/KNN.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.cpp > CMakeFiles/targil_2.dir/project/KNN.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/valle/CLionProjects/redo/project/KNN.cpp > CMakeFiles/targil_2.dir/project/KNN.cpp.i
 
 CMakeFiles/targil_2.dir/project/KNN.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/targil_2.dir/project/KNN.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/edena/CLionProjects/targil_1/project/KNN.cpp -o CMakeFiles/targil_2.dir/project/KNN.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/valle/CLionProjects/redo/project/KNN.cpp -o CMakeFiles/targil_2.dir/project/KNN.cpp.s
 
 CMakeFiles/targil_2.dir/project/knnClass.cpp.o: CMakeFiles/targil_2.dir/flags.make
 CMakeFiles/targil_2.dir/project/knnClass.cpp.o: ../project/knnClass.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/targil_2.dir/project/knnClass.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/knnClass.cpp.o -c /mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/targil_2.dir/project/knnClass.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/knnClass.cpp.o -c /mnt/c/Users/valle/CLionProjects/redo/project/knnClass.cpp
 
 CMakeFiles/targil_2.dir/project/knnClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/targil_2.dir/project/knnClass.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.cpp > CMakeFiles/targil_2.dir/project/knnClass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/valle/CLionProjects/redo/project/knnClass.cpp > CMakeFiles/targil_2.dir/project/knnClass.cpp.i
 
 CMakeFiles/targil_2.dir/project/knnClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/targil_2.dir/project/knnClass.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/edena/CLionProjects/targil_1/project/knnClass.cpp -o CMakeFiles/targil_2.dir/project/knnClass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/valle/CLionProjects/redo/project/knnClass.cpp -o CMakeFiles/targil_2.dir/project/knnClass.cpp.s
 
 CMakeFiles/targil_2.dir/project/pair.cpp.o: CMakeFiles/targil_2.dir/flags.make
 CMakeFiles/targil_2.dir/project/pair.cpp.o: ../project/pair.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/targil_2.dir/project/pair.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/pair.cpp.o -c /mnt/c/Users/edena/CLionProjects/targil_1/project/pair.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/targil_2.dir/project/pair.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/pair.cpp.o -c /mnt/c/Users/valle/CLionProjects/redo/project/pair.cpp
 
 CMakeFiles/targil_2.dir/project/pair.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/targil_2.dir/project/pair.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/edena/CLionProjects/targil_1/project/pair.cpp > CMakeFiles/targil_2.dir/project/pair.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/valle/CLionProjects/redo/project/pair.cpp > CMakeFiles/targil_2.dir/project/pair.cpp.i
 
 CMakeFiles/targil_2.dir/project/pair.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/targil_2.dir/project/pair.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/edena/CLionProjects/targil_1/project/pair.cpp -o CMakeFiles/targil_2.dir/project/pair.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/valle/CLionProjects/redo/project/pair.cpp -o CMakeFiles/targil_2.dir/project/pair.cpp.s
 
 CMakeFiles/targil_2.dir/project/distances.cpp.o: CMakeFiles/targil_2.dir/flags.make
 CMakeFiles/targil_2.dir/project/distances.cpp.o: ../project/distances.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/targil_2.dir/project/distances.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/distances.cpp.o -c /mnt/c/Users/edena/CLionProjects/targil_1/project/distances.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/targil_2.dir/project/distances.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/targil_2.dir/project/distances.cpp.o -c /mnt/c/Users/valle/CLionProjects/redo/project/distances.cpp
 
 CMakeFiles/targil_2.dir/project/distances.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/targil_2.dir/project/distances.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/edena/CLionProjects/targil_1/project/distances.cpp > CMakeFiles/targil_2.dir/project/distances.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/valle/CLionProjects/redo/project/distances.cpp > CMakeFiles/targil_2.dir/project/distances.cpp.i
 
 CMakeFiles/targil_2.dir/project/distances.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/targil_2.dir/project/distances.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/edena/CLionProjects/targil_1/project/distances.cpp -o CMakeFiles/targil_2.dir/project/distances.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/valle/CLionProjects/redo/project/distances.cpp -o CMakeFiles/targil_2.dir/project/distances.cpp.s
 
 # Object files for target targil_2
 targil_2_OBJECTS = \
@@ -145,7 +145,7 @@ targil_2: CMakeFiles/targil_2.dir/project/pair.cpp.o
 targil_2: CMakeFiles/targil_2.dir/project/distances.cpp.o
 targil_2: CMakeFiles/targil_2.dir/build.make
 targil_2: CMakeFiles/targil_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable targil_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable targil_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/targil_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -158,6 +158,6 @@ CMakeFiles/targil_2.dir/clean:
 .PHONY : CMakeFiles/targil_2.dir/clean
 
 CMakeFiles/targil_2.dir/depend:
-	cd /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/edena/CLionProjects/targil_1 /mnt/c/Users/edena/CLionProjects/targil_1 /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug /mnt/c/Users/edena/CLionProjects/targil_1/cmake-build-debug/CMakeFiles/targil_2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/valle/CLionProjects/redo /mnt/c/Users/valle/CLionProjects/redo /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug /mnt/c/Users/valle/CLionProjects/redo/cmake-build-debug/CMakeFiles/targil_2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/targil_2.dir/depend
 
